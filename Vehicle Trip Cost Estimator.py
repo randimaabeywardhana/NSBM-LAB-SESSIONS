@@ -1,12 +1,12 @@
-room_charge = float(input("Enter room charge per day: "))
-days = int(input("Enter number of days: "))
-food_charges = float(input("Enter food charges: "))
-service_charge_percent = float(input("Enter service charge percentage: "))
+distance = float(input("Enter distance (km): "))
+efficiency = float(input("Enter fuel efficiency (km per liter): "))
+fuel_price = float(input("Enter fuel price per liter: "))
+tolls = float(input("Enter highway charges: "))
 
-subtotal = room_charge * days + food_charges
-service_charge = subtotal * service_charge_percent / 100
-total_bill = subtotal + service_charge
+fuel_used = distance / efficiency
+fuel_cost = fuel_used * fuel_price
+total_cost = fuel_cost + tolls
 
-print("Subtotal:", subtotal)
-print("Service Charge:", service_charge)
-print("Total Bill:", total_bill)
+print("Fuel Used:", fuel_used, "liters")
+print("Fuel Cost:", fuel_cost)
+print("Final Trip Cost:", total_cost)

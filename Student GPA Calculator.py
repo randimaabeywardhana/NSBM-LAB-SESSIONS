@@ -1,15 +1,12 @@
+m1 = float(input("Enter marks for subject 1: "))
+m2 = float(input("Enter marks for subject 2: "))
+m3 = float(input("Enter marks for subject 3: "))
+m4 = float(input("Enter marks for subject 4: "))
 
-marks = []
-for i in range(4):
-    m = float(input(f"Enter marks for subject {i+1}: "))
-    marks.append(m)
-
-total = sum(marks)
+total = m1 + m2 + m3 + m4
 average = total / 4
-# Simple formula: GPA = average / 25 (gives scale up to 4.0)
-gpa = average / 25
+gpa = average / 25   # simple formula
 
-print("\n--- Result ---")
-print(f"Total Marks: {total:.2f}")
-print(f"Average: {average:.2f}")
-print(f"GPA: {gpa:.2f}")
+print("Total Marks:", total)
+print("Average:", average)
+print("GPA:", gpa)
